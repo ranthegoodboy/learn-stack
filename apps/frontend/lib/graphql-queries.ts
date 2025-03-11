@@ -19,3 +19,22 @@ export const GET_VIDEOS = gql`
     videoCount
   }
 `;
+
+export const GET_VIDEO = gql`
+  query video($id: Int!) {
+    video(id: $id) {
+      id
+      slug
+      title
+      description
+      url
+      createdAt
+      published
+      author {
+        id
+        name
+        avatar
+      }
+    }
+  }
+`;

@@ -1,5 +1,6 @@
 import DesktopNavbar from "@/components/header/desktop-navbar";
 import Navbar from "@/components/header/navbar";
+import ReactQueryProvider from "@/providers/react-query-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -32,7 +33,9 @@ export default function RootLayout({
         <DesktopNavbar>
           <Navbar />
         </DesktopNavbar>
-        {children}
+        <div className="py-20 container mx-auto px-3 md:px-5 lg:px-10">
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </div>
       </body>
     </html>
   );

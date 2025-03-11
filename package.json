@@ -18,5 +18,8 @@
   "description": "",
   "devDependencies": {
     "turbo": "^2.4.2"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.67.2"
   }
 }
